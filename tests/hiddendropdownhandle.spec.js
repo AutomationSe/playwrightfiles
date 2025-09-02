@@ -20,6 +20,11 @@ test("hiddendropdownhandle", async ({ page }) => {
     const options = await page.locator("div[role='option']").all(); // <-- correct selector for options
     for (let option of options) {
         const jobTitle = await option.textContent();
-        console.log(jobTitle.trim());
+        // console.log(jobTitle.trim());
+        if (jobTitle.includes('QA Lead')){
+            await option.click();
+            break
+        }
     }
+    await page.waitForTimeout(5000);
 });
