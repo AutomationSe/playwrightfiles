@@ -36,6 +36,14 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      name: 'smoke',
+      testMatch: [
+        'tests/smoke/assertions.spec.js',
+        'tests/smoke/checkbox.spec.js',
+      ],
+      use: { ...devices['Desktop Chrome'] }, // runs on chromium by default
+    },
+    {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },

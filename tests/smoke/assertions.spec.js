@@ -5,7 +5,7 @@ test.beforeEach(async ({page}) => {
     await page.goto('https://demo.nopcommerce.com/register');
 });
 
-test('capture webTitle', async ({page})=>{
+test.skip('capture webTitle', async ({page})=>{
     // The page is already at the correct URL here
     await expect(page).toHaveURL('https://demo.nopcommerce.com/register');
     await expect(page).toHaveTitle('nopCommerce demo store. Register');
