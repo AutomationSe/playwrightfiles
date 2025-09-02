@@ -21,9 +21,17 @@ test("webtable", async ({page})=>{
     matchedrow.locator('input').check()*/
 
     //Select Multiple products by re-usable function
-    await selectproduct(rows,page,'Product 1')
+/*    await selectproduct(rows,page,'Product 1')
     await selectproduct(rows,page,'Product 3')
-    await selectproduct(rows,page,'Product 5')
+    await selectproduct(rows,page,'Product 5')*/
+
+/*    for (let i=0;i<await rows.count();i++){
+        const row = rows.nth(i);
+        const tds = row.locator('td')
+        for (let j=0; j<await tds.count();j++){
+            console.log(await tds.nth(j).textContent())
+        }
+    }*/
 
     await page.waitForTimeout(5000);
 
